@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelector(".alerta");setTimeout((()=>{e.remove()}),2e3)}));

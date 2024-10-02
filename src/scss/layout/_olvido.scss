@@ -1,0 +1,21 @@
+.olvido {
+    width: 100%;
+    @include grid(1);
+    place-items: center;
+    h1 {
+        font-size: 10rem;
+        text-align: center;
+        margin-top: 5rem;
+        color: $azul;
+    }
+    section {
+        margin-top: 5rem;
+        .formulario {
+            width: 50rem;
+        }
+    }
+    .botones {
+        @include flex();
+        justify-content: space-between;
+    }
+}

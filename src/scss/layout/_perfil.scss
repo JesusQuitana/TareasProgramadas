@@ -1,0 +1,14 @@
+.info_perfil {
+    max-width: 80rem;
+    margin: 1rem auto;
+
+    h2 {
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+    :last-child {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

@@ -1,0 +1,46 @@
+//Tipo de Letra y Paleta de colores
+$font : "Ubuntu", sans-serif;
+
+$azul : #2C2893;
+$verde : #5ECA33;
+$naranja: #F7A62E;
+$gris : #B3AFAF;
+$rojo: #B61E1F;
+$aqua : #41C2C7;
+$morado : #454199;
+$negro: #000;
+$blanco: #fff;
+
+//MIXINS
+@mixin grid($columna, $gap : 0rem) {
+    display: grid;
+    grid-template-columns: repeat($columna, 1fr);
+    gap: $gap;
+}
+@mixin flex($gap : 0rem, $direction : "row") {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+@mixin telf() {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+@mixin tablet() {
+    @media (max-width: 760px) {
+        @content;
+    }
+}
+
+//ANIMACIONES
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeInTranslate {
+    0% {transform: translateY(-10%)}
+    100% {transform: translateY(0%)}
+}

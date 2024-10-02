@@ -1,0 +1,46 @@
+.uptask {
+    @include flex(1rem);
+    position: absolute;
+    inset: 0;
+
+    section {
+        overflow-y: scroll;
+        width: 100%;
+        .jesusQ {
+            @include flex();
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            a {
+                margin-right: 6rem;
+            }
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .dashboard {
+        padding: 0 1rem;
+        background-color: $azul;
+        h1 {
+            font-size: 7rem;
+            color: $blanco;
+            padding-right: .7rem;
+        }
+        ul {
+            list-style-type: none;
+            margin: 2rem 1rem;
+            @include flex(1rem, column);
+            a {
+                display: block;
+                font-weight: bold;
+                color: $blanco;
+                padding: 1rem 1rem;
+                &:hover {
+                    background-color: $gris;
+                }
+            }
+        }
+    }
+}

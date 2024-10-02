@@ -1,0 +1,12 @@
+.tokens {
+    @include grid(6, 1rem);
+
+    input {
+        text-align: center;
+    }
+
+    .botones {
+        grid-column: 1/7;
+        margin: 2rem auto;
+    }
+}

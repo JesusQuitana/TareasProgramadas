@@ -1,0 +1,112 @@
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body {
+    font-family: $font;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+}
+h1, h2, h3 {
+    font-weight: 700;
+    margin: 0 auto;
+
+}
+p, a {
+    font-weight: 300;
+    text-decoration: none;
+    color: $negro;
+    margin: 0;
+}
+.formulario {
+    @include flex(2rem, column);
+    margin-bottom: 2rem;
+
+    input:not(.btn) {
+        width: 100%;
+        padding: 1rem 2rem;
+        border: 1px solid $gris;
+        border-radius: 2rem;
+    }
+}
+.btn {
+    display: inline-block;
+    outline: none;
+    border: none;
+    font-size: 1.6rem;
+    color: $blanco;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &.verde {
+        background-color: $verde;
+        &:hover {
+            background-color: darken($verde, 5%);
+        }
+    }
+    &.rojo {
+        background-color: $rojo;
+        &:hover {
+            background-color: darken($rojo, 5%);
+        }
+    }
+    &.naranja {
+        background-color: $naranja;
+        &:hover {
+            background-color: darken($naranja, 5%);
+        }
+    }
+}
+.alerta {
+    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: $blanco;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    &.exito {
+        background-color: rgba(#26c720, 0.8);
+        border-left: 10px solid darken($verde, 10%);
+    }
+    &.error {
+        background-color: rgba(rgb(228, 34, 34), 0.8);
+        border-left: 10px solid $rojo;
+    }
+}
+.ventana {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background-color: rgba($negro, .5);
+    display: grid;
+    place-items: center;
+
+    .modal {
+        position: absolute;
+        border-radius: 10px;
+        background-color: $blanco;
+        padding: 2rem 6rem;
+        padding-top: 1rem;
+        animation: fadeIn .4s ease;
+        animation: fadeInTranslate .4s ease-out;
+
+        .iconcerrar {
+            cursor: pointer;
+            position: absolute;
+            right: 3%;
+        }
+
+        h3 {
+            margin: 2rem auto;
+            text-align: center;
+            color: $negro;
+        }
+    }
+}
